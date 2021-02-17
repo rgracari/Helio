@@ -10,7 +10,7 @@ namespace Helio
     public class Application : Game
     {
         private GraphicsDeviceManager _graphics;
-        private SpriteBatch _spriteBatch;
+        private SpriteBatch? _spriteBatch;
 
         public Application()
         {
