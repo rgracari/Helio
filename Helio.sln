@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31005.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helio", "Helio\Helio.csproj", "{9C1F1F96-DB4A-4CB2-9AB8-FDD2DD2682DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sandbox", "Sandbox\Sandbox.csproj", "{8D969E70-6926-4AD8-9413-756A6AEC3656}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9C1F1F96-DB4A-4CB2-9AB8-FDD2DD2682DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C1F1F96-DB4A-4CB2-9AB8-FDD2DD2682DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C1F1F96-DB4A-4CB2-9AB8-FDD2DD2682DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C1F1F96-DB4A-4CB2-9AB8-FDD2DD2682DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D969E70-6926-4AD8-9413-756A6AEC3656}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D969E70-6926-4AD8-9413-756A6AEC3656}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D969E70-6926-4AD8-9413-756A6AEC3656}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D969E70-6926-4AD8-9413-756A6AEC3656}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F7D09E08-2E3C-410C-B0E3-8E3AD9726C9E}
+	EndGlobalSection
+EndGlobal
