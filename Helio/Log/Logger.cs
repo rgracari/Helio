@@ -31,7 +31,7 @@ namespace Helio.Log
         /// You can define the minimum level required by the logger to 
         /// ouput the data in the console.
         /// </summary>
-        /// <param name="level"></param>
+        /// <param name="level">enum that allow you to control the log output</param>
         [Conditional("DEBUG")]
         public static void SetLevel(LoggerLevel level)
         {
