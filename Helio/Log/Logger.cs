@@ -39,7 +39,7 @@ namespace Helio.Log
         }
 
         [Conditional("DEBUG")]
-        public static void Trace(string message)
+        public static void Trace(object message)
         {
             if (_level <= LoggerLevel.Trace)
             {
@@ -49,7 +49,7 @@ namespace Helio.Log
         }
 
         [Conditional("DEBUG")]
-        public static void Info(string message)
+        public static void Info(object message)
         {
             if (_level <= LoggerLevel.Info)
             {
@@ -59,7 +59,7 @@ namespace Helio.Log
         }
 
         [Conditional("DEBUG")]
-        public static void Warn(string message)
+        public static void Warn(object message)
         {
             if (_level <= LoggerLevel.Warn)
             {
@@ -69,7 +69,7 @@ namespace Helio.Log
         }
 
         [Conditional("DEBUG")]
-        public static void Error(string message)
+        public static void Error(object message)
         {
             if (_level <= LoggerLevel.Error)
             {
