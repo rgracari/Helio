@@ -1,4 +1,5 @@
 ﻿using System;
+
 using Sandbox.Game;
 
 namespace Sandbox
@@ -8,8 +9,8 @@ namespace Sandbox
         [STAThread]
         static void Main()
         {
-            using (var game = new Gamos())
-                game.Run();
+            using (var sandbox = new SandboxApp())
+                sandbox.Run();
         }
     }
 }

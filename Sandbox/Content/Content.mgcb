@@ -13,3 +13,9 @@
 
 #---------------------------------- Content ---------------------------------#
 
+#begin Xml/BaseActor.xml
+/copy:Xml/BaseActor.xml
+
+#begin Xml/personTest.xml
+/copy:Xml/personTest.xml
+

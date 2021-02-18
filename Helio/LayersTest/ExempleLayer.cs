@@ -1,10 +1,7 @@
 ﻿using Helio.Events;
-using Helio.Log;
+
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Helio.Layers
 {
@@ -22,7 +19,6 @@ namespace Helio.Layers
 
         public bool OnMousePressed(Event evnt)
         {
-            Logger.Warn("Mouse Pressed!");
             return false;
         }
 
