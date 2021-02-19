@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
 using Helio.Events;
+using Helio.Core;
 
 namespace Helio
 {
@@ -11,14 +12,16 @@ namespace Helio
         protected GraphicsDeviceManager _graphics;
         protected SpriteBatch? _spriteBatch;
 
-        private EventManager _eventManager;
+        private GameLogic _gameLogic;
+        //private EventManager _eventManager;
 
         public Application()
         {
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
 
-            _eventManager = new EventManager();
+            _gameLogic = new GameLogic();
+            //_eventManager = new EventManager();
             _graphics = new GraphicsDeviceManager(this);
         }
 
@@ -37,12 +40,23 @@ namespace Helio
             if (Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
+
+            // Before updating the game we are gonna do this
+            // IEventManager::Get()->VTick(20);
+
+            _gameLogic.Update(gameTime);
+
             base.Update(gameTime);
         }
 
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
+
+            foreach (GameView gameView in _gameLogic.GetGameViews())
+            {
+                gameView.Draw(gameTime, _spriteBatch);
+            }
 
             base.Draw(gameTime);
         }

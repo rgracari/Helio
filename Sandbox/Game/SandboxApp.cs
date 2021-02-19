@@ -1,14 +1,28 @@
 ﻿using Helio;
 using Helio.Core;
-using Helio.Debug;
+using Microsoft.Xna.Framework;
 using System.IO;
 
 namespace Sandbox.Game
 {
     public class SandboxApp : Application
     {
+        private ProcessManager _processManager;
+
+        public SandboxApp()
+        {
+            _processManager = new ProcessManager();
+        }
+
         protected override void Initialize()
         {
+            Logger.Warn("For Process and process Managers set GameTime -> DeltaTime");
+            Process delayProcess = new DelayProcess(3000);
+            
+            Process kaboomProcess = new KaboomProcess("Boom boom ahhhh boomm !!!");
+            delayProcess.AttachChild(kaboomProcess);
+
+            _processManager.AttachProcess(delayProcess);
             base.Initialize();
         }
 
@@ -24,10 +38,12 @@ namespace Sandbox.Game
 
             ActorFactory actorFactory = new ActorFactory();
             Actor actor = actorFactory.CreateActor(dataXml);
+        }
 
-            Logger.Test(actor);
-
-            // Page 213 de gamecoding pour la suite
+        protected override void Update(GameTime gameTime)
+        {
+            _processManager.UpdateProcesses(gameTime);
+            base.Update(gameTime);
         }
     }
 }
